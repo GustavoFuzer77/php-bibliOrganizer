@@ -1,0 +1,561 @@
+body {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  overflow-y: hidden;
+  display: flex;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+body ::-webkit-scrollbar {
+  height: 4px;
+}
+body ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+body ::-webkit-scrollbar-thumb {
+  background: #888;
+}
+body ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+a {
+  text-decoration: none;
+  color: #bdbdbd;
+}
+a:hover {
+  color: #2b2b2b;
+}
+
+@-webkit-keyframes slideOpen {
+  from {
+    width: 76px;
+  }
+  to {
+    width: 250px;
+  }
+}
+
+@keyframes slideOpen {
+  from {
+    width: 76px;
+  }
+  to {
+    width: 250px;
+  }
+}
+@-webkit-keyframes divWidth {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes divWidth {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+@-webkit-keyframes slideClose {
+  from {
+    width: 250px;
+  }
+  to {
+    width: 76px;
+  }
+}
+@keyframes slideClose {
+  from {
+    width: 250px;
+  }
+  to {
+    width: 76px;
+  }
+}
+@-webkit-keyframes divClose {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+@keyframes divClose {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+header {
+  z-index: 10;
+  display: flex;
+}
+header .closing-class-style {
+  width: 76px;
+  height: 100vh;
+  background-color: aliceblue;
+  -webkit-animation: slideClose 1.2s forwards;
+          animation: slideClose 1.2s forwards;
+}
+header .closing-class-style .profile-location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  border-bottom: 1px solid gray;
+}
+header .closing-class-style .profile-location span {
+  border: 1px solid gray;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(to right, #f1b1b1, #82e6e8);
+}
+header .closing-class-style .body-menu {
+  display: flex;
+  height: calc(100vh - 120px);
+  align-items: center;
+}
+header .closing-class-style .body-menu nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+header .closing-class-style .body-menu nav div {
+  display: flex;
+  align-items: center;
+  margin: 16px;
+}
+header .closing-class-style .body-menu nav div div {
+  margin: 6px;
+  width: 0px;
+  -webkit-animation: divClose 1.5s forwards;
+          animation: divClose 1.5s forwards;
+}
+header .closing-class-style .body-menu nav div div span {
+  margin-left: 6px;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+header .closing-class-style .body-menu nav a {
+  padding: 0 3px;
+  font-size: 22px;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: #bdbdbd 1px solid;
+  border-radius: 3px;
+}
+header .closing-class-style .body-menu nav a:hover {
+  border: #2b2b2b 1px solid;
+}
+header .opened-class-style {
+  width: 76px;
+  height: 100vh;
+  background-color: aliceblue;
+  -webkit-animation: slideOpen 1.2s forwards;
+          animation: slideOpen 1.2s forwards;
+}
+header .opened-class-style .profile-location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  border-bottom: 1px solid gray;
+}
+header .opened-class-style .profile-location span {
+  border: 1px solid gray;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(to right, #f1b1b1, #82e6e8);
+}
+header .opened-class-style .body-menu {
+  cursor: pointer;
+  display: flex;
+  height: calc(100vh - 120px);
+  align-items: center;
+}
+header .opened-class-style .body-menu nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+header .opened-class-style .body-menu nav div {
+  display: flex;
+  align-items: center;
+  margin: 16px;
+}
+header .opened-class-style .body-menu nav div div {
+  margin: 6px;
+  width: 0px;
+  -webkit-animation: divWidth 1.5s forwards;
+          animation: divWidth 1.5s forwards;
+}
+header .opened-class-style .body-menu nav div div span {
+  margin-left: 6px;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+header .opened-class-style .body-menu nav a {
+  padding: 0 3px;
+  font-size: 22px;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: #bdbdbd 1px solid;
+  border-radius: 3px;
+}
+header .opened-class-style .body-menu nav a:hover {
+  border: #2b2b2b 1px solid;
+}
+header .nav-bar-menu {
+  width: 76px;
+  height: 100vh;
+  background-color: aliceblue;
+}
+header .nav-bar-menu .profile-location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  border-bottom: 1px solid gray;
+}
+header .nav-bar-menu .profile-location span {
+  border: 1px solid gray;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  background: linear-gradient(to right, #f1b1b1, #82e6e8);
+}
+header .body-menu {
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 120px);
+  align-items: center;
+}
+header .body-menu nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+header .body-menu nav div {
+  display: flex;
+  align-items: center;
+  margin: 16px;
+}
+header .body-menu nav div div {
+  margin: 6px;
+  width: 0px;
+}
+header .body-menu nav div div span {
+  margin-left: 6px;
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+header .body-menu nav a {
+  display: flex;
+  padding: 0 3px;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  border: #bdbdbd 1px solid;
+  border-radius: 3px;
+  width: 30px;
+  height: 30px;
+}
+header .body-menu nav a:hover {
+  border: #2b2b2b 1px solid;
+}
+header .login-location {
+  height: 40px;
+  padding: 6px;
+  font-weight: bold;
+  color: #bdbdbd;
+}
+header .login-location a {
+  cursor: pointer;
+}
+
+.login-modal {
+  display: none;
+  inset: 0;
+  width: 100%;
+  position: absolute;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100%;
+  z-index: 20;
+}
+.login-modal .body-modal-login {
+  margin: 60px 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: calc(100vh - 120px);
+}
+.login-modal .body-content-login {
+  width: 300px;
+  height: 250px;
+  background-color: rgb(203, 253, 253);
+  border-radius: 6px;
+  padding: 26px;
+}
+.login-modal .body-content-login input {
+  max-width: 100%;
+  width: 100%;
+  padding: 6px 6px 6px 6px;
+  margin-bottom: 16px;
+}
+.login-modal .body-content-login label {
+  font-weight: 600;
+  font-family: "Times New Roman", Times, serif;
+}
+.login-modal .body-content-login form {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login-modal .body-content-login form div {
+  width: 100%;
+}
+.login-modal .body-content-login form button {
+  width: 100px;
+  height: 32px;
+  border: 1px solid rgb(249, 215, 152);
+  border-radius: 2px;
+  font-weight: bold;
+  color: #2b2b2b;
+}
+.login-modal .body-content-login form button:hover {
+  background-color: #82e6e8;
+}
+
+.livro-per-id-modal {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  z-index: 20;
+}
+.livro-per-id-modal span {
+  font-weight: bolder;
+  color: #2b2b2b;
+  font-size: 22px;
+}
+.livro-per-id-modal .modal-content-idlivro {
+  width: 600px;
+  height: 600px;
+  background-color: rgb(203, 253, 253);
+}
+.livro-per-id-modal .modal-content-idlivro .info-section-idLivro-modal {
+  margin: 32px;
+}
+.livro-per-id-modal .modal-content-idlivro .info-image-description {
+  display: flex;
+}
+.livro-per-id-modal .modal-content-idlivro .info-image-description .image-section {
+  width: 110px;
+  height: 130px;
+  background-color: tomato;
+}
+.livro-per-id-modal .modal-content-idlivro .info-image-description .text-section {
+  text-align: center;
+  width: 400px;
+  margin-left: 16px;
+  color: violet;
+}
+.livro-per-id-modal .modal-content-idlivro .info-image-description .text-section span {
+  font-weight: bolder;
+  color: #2b2b2b;
+  font-size: 22px;
+}
+.livro-per-id-modal .modal-content-idlivro .about-actor-section span {
+  font-weight: bolder;
+  color: #2b2b2b;
+  font-size: 22px;
+}
+.livro-per-id-modal .more-books-from-actor {
+  display: flex;
+  max-width: 590px;
+  width: 100%;
+  overflow: auto;
+}
+.livro-per-id-modal .more-books-from-actor .image-section {
+  width: 110px;
+  min-width: 110px;
+  height: 130px;
+  background-color: tomato;
+  margin: 6px;
+}
+
+.perfil-dados-modal {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  z-index: 20;
+}
+.perfil-dados-modal span {
+  font-weight: bolder;
+  color: #2b2b2b;
+  font-size: 22px;
+}
+.perfil-dados-modal .modal-content-perfil {
+  width: 600px;
+  height: 600px;
+  background-color: rgb(203, 253, 253);
+}
+.perfil-dados-modal .modal-content-perfil .info-section-perfil-modal {
+  margin: 32px;
+}
+.perfil-dados-modal .modal-content-perfil .info-image-description-perfil {
+  display: flex;
+}
+.perfil-dados-modal .modal-content-perfil .info-image-description-perfil .image-section-perfil {
+  width: 110px;
+  height: 130px;
+  background-color: tomato;
+}
+.perfil-dados-modal .modal-content-perfil .info-image-description-perfil .text-section-perfil {
+  width: 400px;
+  margin-left: 16px;
+  color: violet;
+}
+.perfil-dados-modal .modal-content-perfil .info-image-description-perfil .text-section-perfil span {
+  font-weight: bolder;
+  color: #2b2b2b;
+  font-size: 22px;
+}
+.perfil-dados-modal .modal-content-perfil .about-actor-section-perfil span {
+  font-weight: bolder;
+  color: #2b2b2b;
+  font-size: 22px;
+}
+.perfil-dados-modal .livros-alugados-perfil {
+  display: flex;
+  max-width: 590px;
+  width: 100%;
+  overflow: auto;
+  height: 170px;
+}
+.perfil-dados-modal .livros-alugados-perfil .image-section-perfil {
+  width: 110px;
+  min-width: 110px;
+  height: 130px;
+  background-color: tomato;
+  margin: 6px;
+}
+.perfil-dados-modal .livros-alugados-perfil .image-section-perfil p {
+  padding: 0;
+  margin: 0;
+}
+.perfil-dados-modal .livros-alugados-perfil .image-section-perfil img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.perfil-dados-modal .livros-alugados-perfil .image-section-perfil img:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.home-listagem-livros {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin-top: 60px;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+}
+.home-listagem-livros .content-home-livros {
+  width: 800px;
+  height: 100%;
+  background-color: #f1f1f1;
+  overflow-y: auto;
+  padding: 32px;
+  border-radius: 10px;
+}
+.home-listagem-livros .content-home-livros .input-location {
+  position: relative;
+  padding-bottom: 32px;
+  border-bottom: 1px solid tomato;
+}
+.home-listagem-livros .content-home-livros .input-location div {
+  display: flex;
+  align-items: center;
+}
+.home-listagem-livros .content-home-livros .input-location div input {
+  width: 800px;
+  border: none;
+  padding: 6px 32px 6px 6px;
+}
+.home-listagem-livros .content-home-livros .input-location div div {
+  position: absolute;
+  right: 6px;
+}
+.home-listagem-livros .content-home-livros .space-to-content-list {
+  width: 800px;
+  min-width: 800px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.home-listagem-livros .content-home-livros .space-to-content-list .content-listagem-livros {
+  margin: 16px;
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+}
+.home-listagem-livros .content-home-livros .space-to-content-list .content-listagem-livros div {
+  width: 125px;
+  height: 175px;
+  margin: 32px 32px 6px 32px;
+  background-color: rgb(125, 200, 203);
+}
+.home-listagem-livros .content-home-livros .space-to-content-list .content-listagem-livros div p {
+  padding: 0;
+  margin: 0;
+}
+.home-listagem-livros .content-home-livros .space-to-content-list .content-listagem-livros div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.home-listagem-livros .content-home-livros .space-to-content-list .content-listagem-livros div img:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}/*# sourceMappingURL=index.style.css.map */
