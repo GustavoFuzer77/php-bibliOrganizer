@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  overflow-y: hidden;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+body ::-webkit-scrollbar {
+  height: 4px;
+}
+body ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+body ::-webkit-scrollbar-thumb {
+  background: #888;
+}
+body ::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+a {
+  text-decoration: none;
+  color: #bdbdbd;
+}
+a:hover {
+  color: #2b2b2b;
+}
+
+.login-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "Form images";
+  width: 100vw;
+  height: 100vh;
+}
+
+.Form {
+  grid-area: Form;
+  background-color: #f1f1f1;
+  padding: 32px;
+}
+.Form .voltar-pagina {
+  font-weight: bold;
+  font-size: 20px;
+  color: tomato;
+  cursor: pointer;
+}
+.Form .container-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 64px;
+  background: linear-gradient(180deg, #bdbdbd, #f2f2f2);
+  border-radius: 6px;
+  padding: 16px;
+  box-shadow: 4px 20px 16px 0px rgba(43, 43, 43, 0.2);
+}
+.Form .container-form input {
+  margin: 16px 0 16px 0;
+  padding: 6px;
+}
+.Form .container-form button {
+  padding: 12px;
+  background-color: antiquewhite;
+  cursor: pointer;
+  border: 1px solid rgb(236, 200, 154);
+}
+.Form .container-form .criar-conta {
+  padding: 6px;
+  font-size: 18px;
+}
+.Form .container-form .criar-conta a {
+  font-weight: bolder;
+  color: lightcoral;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.images {
+  grid-area: images;
+  background-image: url("../../assets/img/alfons-morales-ylswjsy7stw-unsplash.jpg");
+  background-size: cover;
+  box-shadow: inset 14px 0px 20px 3px black;
+}/*# sourceMappingURL=login.style.css.map */

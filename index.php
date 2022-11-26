@@ -1,3 +1,9 @@
+<?php
+require_once "global.php";
+require_once "db.connect.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -8,43 +14,13 @@
   <link rel="stylesheet" href="./styles/home/index.style.css">
   <script src="https://morgan3d.github.io/include.js/include.min.js" defer></script>
   <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>BibliOrganizer</title>
 </head>
 
 
 <body>
-  <header>
-    <aside class="nav-bar-menu" id='nav-bar-menu'>
-      <div class="profile-location">
-        <span></span>
-      </div>
-      <div class="body-menu">
-        <nav>
-          <div>
-            <a href="">📚</a>
-            <div>
-              <span>Categorias</span>
-            </div>
-          </div>
-          <div>
-            <a href="">⬆</a>
-            <div>
-              <span>Adicionar livros</span>
-            </div>
-          </div>
-          <div>
-            <a href="">🍷</a>
-            <div>
-              <span>Lorem ipsum dolor sit amet</span>
-            </div>
-          </div>
-        </nav>
-      </div>
-      <div class="login-location">
-        <a class="modal-login-a" onclick="openModalLogin(this)"><span>🔑</span>Logar</a>
-      </div>
-    </aside>
-  </header>
+  <?php require_once 'components/header.php' ?>
   <main>
     <!-- LOGIN MODAL -->
     <div class="login-modal close">
@@ -52,7 +28,7 @@
         <div class="body-content-login">
           <form action="">
             <div>
-              <label for="email">Digite seu email:</label>
+              <label for="email">Digite seu email:</label>jpg
               <input type="text" name="email">
             </div>
             <div>
@@ -64,35 +40,6 @@
         </div>
       </div>
     </div>
-    <!-- LOGIN MODAL -->
-    <!-- LIVRO POR ID MODAL -->
-    <div class="livro-per-id-modal">
-      <div class="modal-content-idlivro">
-        <div class="info-section-idLivro-modal">
-          <div class="info-image-description">
-            <div class="image-section"></div>
-            <div class="text-section">
-              <span>Título</span>
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum dolor odit corrupti hic voluptatem dolorum maiores eum assumenda perspiciatis commodi doloremque aperiam molestiae, eos inventore nihil nisi, voluptates dignissimos provident.</p>
-            </div>
-          </div>
-          <div class="about-actor-section">
-            <span>Sobre o autor</span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid minima ab possimus similique cupiditate. Aspernatur cum fugiat, neque ab ipsam, asperiores minus cumque, consequatur quaerat vero maxime dolorum ad pariatur.</p>
-          </div>
-          <span>titulos semelhantes</span>
-          <div class="more-books-from-actor">
-            <div class="image-section list"></div>
-            <div class="image-section list"></div>
-            <div class="image-section list"></div>
-            <div class="image-section list"></div>
-            <div class="image-section list"></div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <!-- LIVRO POR ID MODAL -->
 
     <!-- DADOS PERFIL MODAL -->
     <div class="perfil-dados-modal">
@@ -114,23 +61,23 @@
           <span>Livros alugados</span>
           <div class="livros-alugados-perfil">
             <div class="image-section-perfil list">
-              <img src="./assets/img/duna.jpg" alt="">
+              <img src="<?= $URL ?>/assets/img/bookImg/duna.jpg" alt="">
               <p>Duna</p>
             </div>
             <div class="image-section-perfil list">
-              <img src="./assets/img/duna.jpg" alt="">
+              <img src="<?= $URL ?>/assets/img/bookImg/duna.jpg" alt="">
               <p>Duna</p>
             </div>
             <div class="image-section-perfil list">
-              <img src="./assets/img/duna.jpg" alt="">
+              <img src="<?= $URL ?>/assets/img/bookImg/duna.jpg" alt="">
               <p>Duna</p>
             </div>
             <div class="image-section-perfil list">
-              <img src="./assets/img/duna.jpg" alt="">
+              <img src="<?= $URL ?>/assets/img/bookImg/duna.jpg" alt="">
               <p>Duna</p>
             </div>
             <div class="image-section-perfil list">
-              <img src="./assets/img/duna.jpg" alt="">
+              <img src="<?= $URL ?>/assets/img/bookImg/duna.jpg" alt="">
               <p>Duna</p>
             </div>
           </div>
@@ -143,70 +90,17 @@
     <div class="home-listagem-livros">
       <div class="content-home-livros">
         <div class="input-location">
-          <div>
-            <input type="text" placeholder="digite o nome do livro para buscar">
+          <form action="" method="GET">
+            <input type="text" name="q" type="search" placeholder="digite o nome do livro para buscar">
             <div>🔍</div>
-          </div>
+          </form>
         </div>
         <div class="space-to-content-list">
           <div class="content-listagem-livros">
-            <div>
-              <img src="./assets/img/duna.jpg" alt="">
+            <a class="book-list" href="./pages/livroInfo/livro.php?id=1">
+              <img src="<?= $URL ?>assets/img/bookImg/duna.jpg" alt="">
               <p>Duna</p>
-            </div>
-            <div>
-              <img src="./assets/img/duna.jpg" alt="">
-              <p>Duna</p>
-            </div>
-            <div>
-              <img src="./assets/img/duna.jpg" alt="">
-              <p>Duna</p>
-            </div>
-            <div>
-              <img src="./assets/img/duna.jpg" alt="">
-              <p>Duna</p>
-            </div>
-            <div>
-              <img src="./assets/img/duna.jpg" alt="">
-              <p>Duna</p>
-            </div>
-            <div>
-              <img src="./assets/img/duna.jpg" alt="">
-              <p>Duna</p>
-            </div>
-            <div>
-              <img src="./assets/img/duna.jpg" alt="">
-              <p>Duna</p>
-            </div>
-            <div>
-              <img src="./assets/img/duna.jpg" alt="">
-              <p>Duna</p>
-            </div>
-            <div>
-              <img src="./assets/img/duna.jpg" alt="">
-              <p>Duna</p>
-            </div>
-            <div>
-              <img src="./assets/img/duna.jpg" alt="">
-              <p>Duna</p>
-            </div>
-            <div>
-              <img src="./assets/img/duna.jpg" alt="">
-              <p>Duna</p>
-            </div>
-            <div>
-              <img src="./assets/img/duna.jpg" alt="">
-              <p>Duna</p>
-            </div>
-            <div>
-              <img src="./assets/img/duna.jpg" alt="">
-              <p>Duna</p>
-            </div>
-            <div>
-              <img src="./assets/img/duna.jpg" alt="">
-              <p>Duna</p>
-            </div>
-
+            </a>
           </div>
         </div>
       </div>
@@ -215,6 +109,6 @@
   </main>
 
 </body>
-<script src='./assets/scriptHome.js' defer></script>
+<script src='<?= $URL ?>assets/scriptHome.js' defer></script>
 
 </html>

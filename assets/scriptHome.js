@@ -33,32 +33,6 @@ function includeHTML() {
 
 let domE = document.querySelector("#nav-bar-menu");
 
-function openModalLogin(e) {
-  let domModalLogin = document.querySelector(".login-modal");
-  if (domModalLogin.classList.contains("close")) {
-    domModalLogin.style.display = "block";
-    domModalLogin.addEventListener("click", (e) => {
-      console.log();
-      if (e.target.classList[0] == "body-modal-login") {
-        domModalLogin.style.display = "none";
-      }
-    });
-  }
-}
-
-function openModalLivroInfo() {
-  const domModalLivroInfo = document.querySelector(".livro-per-id-modal");
-  if (domModalLivroInfo.classList.contains("livro-per-id-modal")) {
-    domModalLivroInfo.style.display = "flex";
-    domModalLivroInfo.addEventListener("click", (e) => {
-      console.log(e.target.classList);
-      if (e.target.classList[0] == "livro-per-id-modal") {
-        domModalLivroInfo.style.display = "none";
-      }
-    });
-  }
-}
-
 domE.addEventListener(
   "click",
   (e) => {
@@ -71,3 +45,42 @@ domE.addEventListener(
   },
   false
 );
+
+// function openModalLogin(e) {
+//   let domModalLogin = document.querySelector(".login-modal");
+//   if (domModalLogin.classList.contains("close")) {
+//     domModalLogin.style.display = "block";
+//     domModalLogin.addEventListener("click", (e) => {
+//       console.log();
+//       if (e.target.classList[0] == "body-modal-login") {
+//         domModalLogin.style.display = "none";
+//       }
+//     });
+//   }
+// }
+
+// const buttonClickOpenBookId = document.querySelector(".book-list");
+// buttonClickOpenBookId.addEventListener("click", (e) => {
+//   const modal = document.querySelector(".livro-per-id-modal");
+//   modal.style.display = "flex";
+//   modal.addEventListener("click", (ev) => {
+//     if (ev.target.classList[0] == "livro-per-id-modal") {
+//       modal.style.display = "none";
+//     }
+//   });
+// });
+
+function openProfileData() {
+  const domIconPerson = document.querySelector(".perfil-dados-modal");
+  if (domIconPerson.classList.contains("perfil-dados-modal")) {
+    domIconPerson.style.display = "flex";
+    domIconPerson.addEventListener("click", (e) => {
+      console.log(e.target.classList);
+      if (e.target.classList[0] == "perfil-dados-modal") {
+        domIconPerson.style.display = "none";
+      }
+    });
+  }
+}
+
+
