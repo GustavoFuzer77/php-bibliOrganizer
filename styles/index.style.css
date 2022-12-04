@@ -24,7 +24,7 @@ body ::-webkit-scrollbar-thumb:hover {
 
 a {
   text-decoration: none;
-  color: #bdbdbd;
+  color: #636363;
 }
 a:hover {
   color: #2b2b2b;
@@ -130,6 +130,7 @@ header .closing-class-style .profile-location {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   height: 60px;
   border-bottom: 1px solid gray;
 }
@@ -466,12 +467,12 @@ header .login-location a {
 .perfil-dados-modal .modal-content-perfil .info-image-description-perfil .image-section-perfil {
   width: 110px;
   height: 130px;
-  background-color: tomato;
+  background-color: rgb(0, 0, 0);
 }
 .perfil-dados-modal .modal-content-perfil .info-image-description-perfil .text-section-perfil {
   width: 400px;
   margin-left: 16px;
-  color: violet;
+  color: rgb(0, 0, 0);
 }
 .perfil-dados-modal .modal-content-perfil .info-image-description-perfil .text-section-perfil span {
   font-weight: bolder;
@@ -489,12 +490,12 @@ header .login-location a {
   width: 100%;
   overflow: auto;
   height: 170px;
+  margin-top: 16px;
 }
 .perfil-dados-modal .livros-alugados-perfil .image-section-perfil {
   width: 110px;
   min-width: 110px;
   height: 130px;
-  background-color: tomato;
   margin: 6px;
 }
 .perfil-dados-modal .livros-alugados-perfil .image-section-perfil p {
@@ -565,7 +566,7 @@ header .login-location a {
   margin: 32px 32px 6px 32px;
   display: flex;
   flex-direction: column;
-  background-color: rgb(125, 200, 203);
+  background-color: rgb(166, 166, 166);
 }
 .home-listagem-livros .content-home-livros .space-to-content-list .content-listagem-livros .book-list p {
   padding: 0;
@@ -606,4 +607,128 @@ header .login-location a {
 .snackBar-message .msg {
   margin: 0;
   color: white;
+}
+
+@-webkit-keyframes entradaAnime {
+  from {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes entradaAnime {
+  from {
+    opacity: 0;
+    transform: translateX(-150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.login-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "Form images";
+  width: 100vw;
+  height: 100vh;
+}
+@media screen and (max-width: 1024px) {
+  .login-page {
+    grid-template-columns: 1fr;
+  }
+  .login-page .images {
+    display: none;
+  }
+}
+.login-page .Form {
+  grid-area: Form;
+  background-color: #f1f1f1;
+  padding: 32px;
+}
+.login-page .Form .voltar-pagina {
+  font-weight: bold;
+  font-size: 20px;
+  color: tomato;
+  cursor: pointer;
+}
+.login-page .Form .container-form {
+  -webkit-animation: entradaAnime 1s forwards;
+          animation: entradaAnime 1s forwards;
+  display: flex;
+  flex-direction: column;
+  margin-top: 64px;
+  background: linear-gradient(180deg, #bdbdbd, #f2f2f2);
+  border-radius: 6px;
+  padding: 16px;
+  box-shadow: 4px 20px 16px 0px rgba(43, 43, 43, 0.2);
+}
+.login-page .Form .container-form input {
+  margin: 16px 0 16px 0;
+  padding: 6px;
+}
+.login-page .Form .container-form button {
+  padding: 12px;
+  background-color: antiquewhite;
+  cursor: pointer;
+  border: 1px solid rgb(236, 200, 154);
+}
+.login-page .Form .container-form .criar-conta {
+  padding: 6px;
+  font-size: 18px;
+}
+.login-page .Form .container-form .criar-conta a {
+  font-weight: bolder;
+  color: lightcoral;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.images {
+  grid-area: images;
+  background-image: url("../assets/img/alfons-morales-ylswjsy7stw-unsplash.jpg");
+  background-size: cover;
+  box-shadow: inset 14px 0px 20px 3px black;
+}
+
+.div-image-select-user {
+  background-size: cover;
+  overflow: none;
+  width: 162px;
+  height: 162px;
+  border-radius: 50%;
+}
+
+.livro-finded-by-id {
+  margin-top: 62px;
+  margin-left: 32px;
+}
+.livro-finded-by-id .name-image {
+  display: flex;
+}
+.livro-finded-by-id .name-image .descritivo-titulo {
+  width: 600px;
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.livro-finded-by-id .name-image .descritivo-titulo p {
+  font-weight: 500;
+  font-size: 16px;
+  text-align: justify;
+}
+.livro-finded-by-id .name-image .descritivo-titulo span {
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.livro-finded-by-id .name-image .imagem-capa {
+  width: 300px;
+  height: 400px;
 }/*# sourceMappingURL=index.style.css.map */
